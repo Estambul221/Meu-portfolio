@@ -1,0 +1,137 @@
+/* Imports the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: rgba(10, 10, 58, 0.8);
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem;
+    background-color: rgb(27, 27, 65);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border: solid 1px rgb(106, 106, 143); /*TESTE*/
+}
+
+.logo {
+    font-size: 1.7rem;
+    color: white;
+    font-weight: 600;
+    cursor: default;
+}
+
+.nav a {
+    font-size: 1.2rem;
+    color: white;
+    transition: 0.4s;
+    border: solid 1px rgb(106, 106, 143); /*TESTE*/
+}
+
+.nav a:hover {
+    color: rgb(27, 27, 82);
+}
+
+section {
+    min-height: 100vh;
+    padding: 6rem 6rem 2rem;
+    border: solid 1px rgb(106, 106, 143); /*TESTE*/
+}
+
+span {
+    color: rgb(22, 22, 61);
+}
+
+/* Ajuste da seção "about" */
+.home .about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Garantir que os elementos fiquem em linha */
+}
+
+.about-img {
+    max-width: 40%; /* Define o tamanho máximo da imagem */
+    width: 100%;
+    border-right: solid 0.6rem rgb(15, 15, 55);
+    border-bottom: solid 0.6rem rgb(22, 22, 61);
+    border-image: linear-gradient(red, blue) 1;
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+}
+
+.about-text {
+    max-width: 50%; /* Limita o tamanho do texto para que fique ao lado da imagem */
+    padding-left: 2rem; /* Espaçamento entre o texto e a imagem */
+}
+
+/* Ajuste da seção "profile" */
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Garantir que os elementos fiquem em linha */
+}
+
+.profile-text {
+    max-width: 50%;
+    padding-right: 2rem; /* Espaçamento entre o texto e a imagem */
+    order: 1; /* Define a posição do texto à esquerda */
+}
+
+.profile-img {
+    max-width: 40%;
+    width: 100%;
+    order: 2; /* Define a posição da imagem à direita */
+    border-right: solid 0.6rem rgb(15, 15, 55);
+    border-bottom: solid 0.6rem rgb(22, 22, 61);
+    border-image: linear-gradient(red, blue) 1;
+}
+
+.profile-img img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para dispositivos menores */
+    section {
+        padding: 4rem 2rem;
+    }
+
+    .home .about, .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text, .about-img, .profile-text, .profile-img {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
